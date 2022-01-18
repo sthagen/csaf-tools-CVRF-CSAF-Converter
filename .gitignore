@@ -1,1 +1,3 @@
-/.idea/inspectionProfiles/
+/.idea/
+/venv/
+/cvrf2csaf.egg-info/
