@@ -49,13 +49,19 @@ _Hint: If you would like to get the debugger running, try to install the code as
 
 ### Usage as CLI tool
 
-To convert the CVRF CSAF 1.2 document `$ROOT_DIR/CVRF-CSAF-Converter/sample_input/sample.xml` use the following command:
+To convert the CVRF CSAF 1.2 document `$ROOT_DIR/CVRF-CSAF-Converter/examples/1.2/cvrf_example_a.xml` use the following command:
 
 ```shell script
-   cvrf2csaf --input-file $ROOT_DIR/CVRF-CSAF-Converter/sample_input/sample.xml --output-file sample.json
+   cvrf2csaf --input-file $ROOT_DIR/CVRF-CSAF-Converter/examples/1.2/cvrf_example_a.xml
 ```
 
-The help can be shown with:
+The default output directory is `./`, it can be set using `--output-dir`. 
+
+The output filename is derived from the CSAF field `/document/tracking/id`.
+
+If there is an ERROR during conversion, the output file will not be written unless `--force` option is used.
+
+The rest of the options can be shown with:
 
 ```shell script
    cvrf2csaf -h
@@ -63,7 +69,8 @@ The help can be shown with:
 
 ### Config
 
-``` To Be Published ```
+The [config file](https://github.com/csaf-tools/CVRF-CSAF-Converter/blob/main/cvrf2csaf/config/config.yaml) is installed inside the Python package (`.../site-packages/cvrf2csaf/config/config.yaml`).
+Convertor options can be changed there, or overridden by command line arguments/options.
 
 ## Specifications
 
